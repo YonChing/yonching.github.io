@@ -28,6 +28,12 @@ Welcome to template's documentation!
    emall
    rbac
 
+.. automodule:: pymap3d
+  :members:
+
+.. automodule:: pymap3d.vincenty
+  :members:
+
 Indices and tables
 ==================
 
