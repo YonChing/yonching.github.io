@@ -1,0 +1,237 @@
+@startuml activiti
+
+' hide the spot
+hide circle
+
+' avoid problems with angled crows feet
+skinparam linetype ortho
+
+entity "ACT_GE_PROPERTY" as ACT_GE_PROPERTY {
+  
+
+}
+
+entity "ACT_GE_BYTEARRAY" as ACT_GE_BYTEARRAY {
+  *ID_ : text <<generated>>
+  --
+  *DEPLOYMENT_ID_ : text <<FK>>  
+}
+
+entity "ACT_RE_DEPLOYMENT" as ACT_RE_DEPLOYMENT {
+  *ID_ : text <<generated>>
+  --
+  *TENANT_ID_ : text <<FK>> 
+}
+
+entity "ACT_RE_PROCDEF" as ACT_RE_PROCDEF {
+  *ID_ : text <<generated>>
+  --
+  DEPLOYMENT_ID_ : text 
+  TENANT_ID_ : text
+}
+
+entity "ACT_RE_MODEL" as ACT_RE_MODEL {
+  *ID_ : text <<generated>>
+  --
+  EDITOR_SOURCE_VALUE_ID_ : text 
+  EDITOR_SOURCE_EXTRA_VALUE_ID_ : text
+  DEPLOYMENT_ID_ : text
+  TENANT_ID_ : text
+}
+
+entity "ACT_RU_EXECUTION" as ACT_RU_EXECUTION {
+  *ID_ : text <<generated>>
+  --
+  *PROC_INST_ID_ : text <<FK>>  
+  *PARENT_ID_ : text <<FK>>
+  *SUPER_EXEC_ : text <<FK>>
+  *PROC_DEF_ID_ : text <<FK>>
+  ACT_ID_  : text
+  TENANT_ID_ : text
+}
+
+entity "ACT_RU_IDENTITYLINK" as ACT_RU_IDENTITYLINK {
+  *ID_ : text <<generated>>
+  --
+  *TASK_ID_ : text 
+  *PROC_DEF_ID_ : text
+  *PROC_INST_ID_ : text
+  USER_ID_ : text
+  GROUP_ID_ : text
+}
+
+
+entity "ACT_RU_TASK" as ACT_RU_TASK {
+  *ID_ : text <<generated>>
+  --
+  *EXECUTION_ID_ : text 
+  *PROC_DEF_ID_ : text
+  *PROC_INST_ID_ : text
+  PARENT_TASK_ID_ : text
+  TENANT_ID_ : text
+  FORM_KEY_ : text
+}
+
+
+entity "ACT_RU_VARIABLE" as ACT_RU_VARIABLE {
+  *ID_ : text <<generated>>
+  --
+  EXECUTION_ID_ : text 
+  PROC_INST_ID_ : text
+  BYTEARRAY_ID_ : text
+  TASK_ID_ : text
+}
+
+
+entity "ACT_RU_JOB" as ACT_RU_JOB {
+  *ID_ : text <<generated>>
+  --
+  EXCEPTION_STACK_ID_ : text 
+  PROC_DEF_ID_ : text
+  PROCESS_INSTANCE_ID_ : text
+  EXCEPTION_STACK_ID_ : text
+  TENANT_ID_ : text
+}
+
+
+entity "ACT_RU_EVENT_SUBSCR" as ACT_RU_EVENT_SUBSCR {
+  *ID_ : text <<generated>>
+  --
+  EXECUTION_ID_ : text 
+  PROC_DEF_ID_ : text
+  PROC_INST_ID_ : text
+  ACTIVITY_ID_ : text
+  TENANT_ID_ : text
+}
+
+
+
+entity "ACT_PROCDEF_INFO" as ACT_PROCDEF_INFO {
+  *ID_ : text <<generated>>
+  --
+  PROC_DEF_ID_ : text   
+  INFO_JSON_ID_ : text
+}
+
+entity "ACT_EVT_LOG" as ACT_EVT_LOG {
+  *LOG_NR_ : number <<generated>>
+  --
+  PROC_DEF_ID_ : text   
+  PROC_INST_ID_ : text
+  EXECUTION_ID_ : text
+  TASK_ID_ : text
+  USER_ID_ : text
+}
+
+
+entity "ACT_HI_PROCINST" as ACT_HI_PROCINST {
+  *ID_ : text <<generated>>
+  --
+  PROC_INST_ID_ : text 
+  BUSINESS_KEY_ : text
+  PROC_DEF_ID_ : text
+  START_USER_ID_ : text
+  START_ACT_ID_ : text
+  END_ACT_ID_ : text
+  SUPER_PROCESS_INSTANCE_ID_ : text
+  TENANT_ID_ : text
+}
+
+
+entity "ACT_HI_ACTINST" as ACT_HI_ACTINST {
+  *ID_ : text <<generated>>
+  --
+  PROC_DEF_ID_ : text 
+  PROC_INST_ID_ : text
+  EXECUTION_ID_ : text
+  ACT_ID_ : text
+  TASK_ID_ : text
+  CALL_PROC_INST_ID_ : text
+  TENANT_ID_ : text
+}
+
+entity "ACT_HI_TASKINST" as ACT_HI_TASKINST {
+  *ID_ : text <<generated>>
+  --
+  PROC_DEF_ID_ : text 
+  PROC_INST_ID_ : text
+  EXECUTION_ID_ : text
+  TASK_DEF_KEY_ : text
+  PARENT_TASK_ID_ : text
+  TENANT_ID_ : text
+  FORM_KEY_ : text
+}
+
+entity "ACT_HI_VARINST" as ACT_HI_VARINST {
+  *ID_ : text <<generated>>
+  --
+  PROC_INST_ID_ : text 
+  EXECUTION_ID_ : text
+  TASK_ID_ : text
+}
+
+entity "ACT_HI_DETAIL" as ACT_HI_DETAIL {
+  *ID_ : text <<generated>>
+  --
+  PROC_INST_ID_ : text 
+  EXECUTION_ID_ : text
+  TASK_ID_ : text
+  ACT_INST_ID_ : text
+}
+
+entity "ACT_HI_COMMENT" as ACT_HI_COMMENT {
+  *ID_ : text <<generated>>
+  --
+  USER_ID_ : text 
+  TASK_ID_ : text
+  PROC_INST_ID_ : text
+}
+
+entity "ACT_HI_ATTACHMENT" as ACT_HI_ATTACHMENT {
+  *ID_ : text <<generated>>
+  --
+  USER_ID_ : text 
+  TASK_ID_ : text
+  PROC_INST_ID_ : text
+  CONTENT_ID_ : text
+}
+
+
+entity "ACT_HI_IDENTITYLINK" as ACT_HI_IDENTITYLINK {
+  *ID_ : text <<generated>>
+  --
+  GROUP_ID_ : text 
+  USER_ID_ : text
+  TASK_ID_ : text
+  PROC_INST_ID_ : text
+}
+
+entity "ACT_ID_GROUP" as ACT_ID_GROUP {
+  *ID_ : text <<generated>> 
+  
+}
+
+entity "ACT_ID_MEMBERSHIP" as ACT_ID_MEMBERSHIP {
+  *USER_ID_ : text <<FK>>
+  *GROUP_ID_ : text <<FK> 
+}
+
+entity "ACT_ID_USER" as ACT_ID_USER {
+  *ID_ : text <<generated>>
+  --
+  PICTURE_ID_ : text   
+}
+
+entity "ACT_ID_INFO" as ACT_ID_INFO {
+  *ID_ : text <<generated>>
+  --
+  USER_ID_ : text 
+  PARENT_ID_ : text
+}
+
+ACT_GE_BYTEARRAY ||..o{ ACT_RE_DEPLOYMENT
+ACT_GE_BYTEARRAY |o..o{ ACT_RE_PROCDEF
+ACT_RU_EXECUTION ||..o{ ACT_RU_EXECUTION
+ACT_RU_EXECUTION }o..|| ACT_RE_PROCDEF
+ACT_RE_PROCDEF ||..o{ ACT_RU_IDENTITYLINK
+@enduml
