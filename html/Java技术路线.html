@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-CN" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Java成长路线 &mdash; blog  文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="Welcome to blog’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> blog
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="在文档中搜索" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Java成长路线</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id1">计算机基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id2">计算机导论</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">计算机组成原理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">计算机体系结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">汇编</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#c">C语言</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">数据结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">操作系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id8">计算机网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id9">数据库原理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id10">软件工程</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id11">Java基础</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id12">开发环境</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id13">Java编程规范</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#google">Google</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#alibaba">Alibaba</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id14">面向过程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id15">面向对象</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id16">异常</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id17">类型系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id18">反射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id19">集合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id20">泛型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#io">IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id21">网络编程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id22">多线程</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id23">函数式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id24">模块化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id25">类库</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#servlet">Servlet</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id26">生命周期</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id27">线程安全</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id28">上下文对象</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cookie">Cookie</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#session">Session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#el">EL表达式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#filter">Filter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#listener">Listener</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id29">文件上传与下载</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tomcat">Tomcat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id30">目录结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id31">配置</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id32">设计模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id33">数据库</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#sql">SQL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id34">索引</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jdbc">JDBC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id35">连接池</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#web">WEB</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#html">HTML</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#css">CSS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#javascript">JavaScript</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ecma">ECMA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vue-js">Vue.js</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#react">React</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#angular">Angular</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nginx">Nginx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id36">反向代理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id37">虚拟主机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id38">负载均衡</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id39">集群部署</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id40">Java后端框架</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#j2ee">J2EE规范</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#maven">Maven</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id41">坐标、依赖和生命周期</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id42">本地仓库、远程仓库和私服</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spring">Spring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#ioc">IOC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#aop">AOP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id46">声明式事务</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#spring-mvc">Spring MVC</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id49">请求参数处理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id50">数据绑定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id51">乱码</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id52">请求映射</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id53">响应处理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#json">JSON处理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id54">上传与下载</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id55">拦截器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id56">国际化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id57">异常处理</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mybatis">Mybatis</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spring-data-jdbc">Spring Data JDBC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spring-security">Spring Security</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id60">日志框架</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spring-boot">Spring boot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#git">git</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id61">本地缓存框架</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id62">分布式中间件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#redis">Redis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id63">数据类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id64">持久化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id65">删除策略</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id66">淘汰策略</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id67">高可用</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#rocketmq">RocketMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#rabbitmq">RabbitMQ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kafka">Kafka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elaticsearch">Elaticsearch</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id68">分词器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id69">关键字搜索</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id70">多条件过滤</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#docker">Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#k8s">K8S</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id71">微服务</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#springcloud">SpringCloud</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#eureka">Eureka</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#nacos">Nacos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ribbon">Ribbon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#openfeign">OpenFeign</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sentinel">Sentinel</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hystrix">Hystrix</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#seata">Seata</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gateway">Gateway</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#skywalking">Skywalking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#loadbalancer">LoadBalancer</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#oauth2">OAuth2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#sleuth">Sleuth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pinpoint">Pinpoint</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id72">底层原理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id73">操作系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id74">计算机网络</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id75">IO模型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id76">磁盘存储</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id77">框架源码原理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id78">Spring</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id79">IOC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id80">AOP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id81">事务</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mvc">MVC</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#security">Security</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#webflux">Webflux</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id82">Mybatis</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id83">源码分析</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id84">实现</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id85">设计模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id86">并发编程</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id87">阻塞队列</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#jmm">JMM</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id88">线程池</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id89">并发集合</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cas">CAS和原子操作</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#disruptor">Disruptor</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#juc">JUC</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id90">调优</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#jvm">JVM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id91">类加载机制</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id92">内存模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id93">字节码文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id94">收集器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id95">调优工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gc">GC日志</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#mysql">Mysql</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id96">SQL执行原理</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id97">索引</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id98">执行计划</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id99">锁机制与隔离级别</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id100">集群架构与分库分表</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id101">Tomcat</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id102">线程模型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#undertow">undertow</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id103">Nginx</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#upstream">upstream</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#location">location</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id104">负载均衡算法</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#lvs">LVS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keepalived">keepalived</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id105">分布式框架</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id106">消息中间件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id107">存储中间件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id108">Redis</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mongodb">MongoDB</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id109">Elaticsearch</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#minio">MinIO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fastdfs">FastDFS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id110">调度中间件</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#quartz">Quartz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#elastic-job">Elastic Job</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id111">其它框架</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#zookeeper">Zookeeper</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#dubbo">Dubbo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shardingsphere">ShardingSphere</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#netty">Netty</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#grpc">GRPC</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id112">大数据</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#hadoop">Hadoop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hdfs">HDFS</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hbase">HBase</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#tidb">TiDB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#clickhouse">Clickhouse</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#elk">ELK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#efk">EFK</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#etl">ETL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mapreduce">MapReduce</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flink">Flink</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#kafka-stream">Kafka Stream</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hive">Hive</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#spark">Spark</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id113">架构</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id114">设计原则</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id115">架构设计模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ddd">DDD</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id116">服务化架构治理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id117">架构设计协议</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id118">架构方案</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id119">核心算法</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#devops">Devops</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id120">测试</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id121">单元测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id122">冒烟测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id123">集成测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id124">全链路测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id125">性能测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id126">分布式测试</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id127">自动化测试</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id128">云原生</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id129">容器化</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cka">CKA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#servicemesh">ServiceMesh</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#serverless">Serverless</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cncf">CNCF</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id130">云计算平台架构</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id131">面试</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">blog</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Java成长路线</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Java技术路线.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="java">
+<h1>Java成长路线<a class="headerlink" href="#java" title="Permalink to this heading"></a></h1>
+<section id="id1">
+<h2>计算机基础<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<section id="id2">
+<h3>计算机导论<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id3">
+<h3>计算机组成原理<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id4">
+<h3>计算机体系结构<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id5">
+<h3>汇编<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+</section>
+<section id="c">
+<h3>C语言<a class="headerlink" href="#c" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id6">
+<h3>数据结构<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id7">
+<h3>操作系统<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id8">
+<h3>计算机网络<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id9">
+<h3>数据库原理<a class="headerlink" href="#id9" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id10">
+<h3>软件工程<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id11">
+<h2>Java基础<a class="headerlink" href="#id11" title="Permalink to this heading"></a></h2>
+<section id="id12">
+<h3>开发环境<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id13">
+<h3>Java编程规范<a class="headerlink" href="#id13" title="Permalink to this heading"></a></h3>
+<section id="google">
+<h4>Google<a class="headerlink" href="#google" title="Permalink to this heading"></a></h4>
+</section>
+<section id="alibaba">
+<h4>Alibaba<a class="headerlink" href="#alibaba" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id14">
+<h3>面向过程<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id15">
+<h3>面向对象<a class="headerlink" href="#id15" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id16">
+<h3>异常<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id17">
+<h3>类型系统<a class="headerlink" href="#id17" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id18">
+<h3>反射<a class="headerlink" href="#id18" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id19">
+<h3>集合<a class="headerlink" href="#id19" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id20">
+<h3>泛型<a class="headerlink" href="#id20" title="Permalink to this heading"></a></h3>
+</section>
+<section id="io">
+<h3>IO<a class="headerlink" href="#io" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id21">
+<h3>网络编程<a class="headerlink" href="#id21" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id22">
+<h3>多线程<a class="headerlink" href="#id22" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id23">
+<h3>函数式<a class="headerlink" href="#id23" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id24">
+<h3>模块化<a class="headerlink" href="#id24" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id25">
+<h3>类库<a class="headerlink" href="#id25" title="Permalink to this heading"></a></h3>
+</section>
+<section id="servlet">
+<h3>Servlet<a class="headerlink" href="#servlet" title="Permalink to this heading"></a></h3>
+<section id="id26">
+<h4>生命周期<a class="headerlink" href="#id26" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id27">
+<h4>线程安全<a class="headerlink" href="#id27" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id28">
+<h4>上下文对象<a class="headerlink" href="#id28" title="Permalink to this heading"></a></h4>
+</section>
+<section id="cookie">
+<h4>Cookie<a class="headerlink" href="#cookie" title="Permalink to this heading"></a></h4>
+</section>
+<section id="session">
+<h4>Session<a class="headerlink" href="#session" title="Permalink to this heading"></a></h4>
+</section>
+<section id="el">
+<h4>EL表达式<a class="headerlink" href="#el" title="Permalink to this heading"></a></h4>
+</section>
+<section id="filter">
+<h4>Filter<a class="headerlink" href="#filter" title="Permalink to this heading"></a></h4>
+</section>
+<section id="listener">
+<h4>Listener<a class="headerlink" href="#listener" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id29">
+<h4>文件上传与下载<a class="headerlink" href="#id29" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="tomcat">
+<h3>Tomcat<a class="headerlink" href="#tomcat" title="Permalink to this heading"></a></h3>
+<section id="id30">
+<h4>目录结构<a class="headerlink" href="#id30" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id31">
+<h4>配置<a class="headerlink" href="#id31" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id32">
+<h3>设计模式<a class="headerlink" href="#id32" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id33">
+<h2>数据库<a class="headerlink" href="#id33" title="Permalink to this heading"></a></h2>
+<section id="sql">
+<h3>SQL<a class="headerlink" href="#sql" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id34">
+<h3>索引<a class="headerlink" href="#id34" title="Permalink to this heading"></a></h3>
+</section>
+<section id="jdbc">
+<h3>JDBC<a class="headerlink" href="#jdbc" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id35">
+<h3>连接池<a class="headerlink" href="#id35" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="web">
+<h2>WEB<a class="headerlink" href="#web" title="Permalink to this heading"></a></h2>
+<section id="html">
+<h3>HTML<a class="headerlink" href="#html" title="Permalink to this heading"></a></h3>
+</section>
+<section id="css">
+<h3>CSS<a class="headerlink" href="#css" title="Permalink to this heading"></a></h3>
+</section>
+<section id="javascript">
+<h3>JavaScript<a class="headerlink" href="#javascript" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ecma">
+<h3>ECMA<a class="headerlink" href="#ecma" title="Permalink to this heading"></a></h3>
+</section>
+<section id="vue-js">
+<h3>Vue.js<a class="headerlink" href="#vue-js" title="Permalink to this heading"></a></h3>
+</section>
+<section id="react">
+<h3>React<a class="headerlink" href="#react" title="Permalink to this heading"></a></h3>
+</section>
+<section id="angular">
+<h3>Angular<a class="headerlink" href="#angular" title="Permalink to this heading"></a></h3>
+</section>
+<section id="nginx">
+<h3>Nginx<a class="headerlink" href="#nginx" title="Permalink to this heading"></a></h3>
+<section id="id36">
+<h4>反向代理<a class="headerlink" href="#id36" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id37">
+<h4>虚拟主机<a class="headerlink" href="#id37" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id38">
+<h4>负载均衡<a class="headerlink" href="#id38" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id39">
+<h4>集群部署<a class="headerlink" href="#id39" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+<section id="id40">
+<h2>Java后端框架<a class="headerlink" href="#id40" title="Permalink to this heading"></a></h2>
+<section id="j2ee">
+<h3>J2EE规范<a class="headerlink" href="#j2ee" title="Permalink to this heading"></a></h3>
+</section>
+<section id="maven">
+<h3>Maven<a class="headerlink" href="#maven" title="Permalink to this heading"></a></h3>
+<section id="id41">
+<h4>坐标、依赖和生命周期<a class="headerlink" href="#id41" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id42">
+<h4>本地仓库、远程仓库和私服<a class="headerlink" href="#id42" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="spring">
+<h3>Spring<a class="headerlink" href="#spring" title="Permalink to this heading"></a></h3>
+<section id="ioc">
+<h4>IOC<a class="headerlink" href="#ioc" title="Permalink to this heading"></a></h4>
+<section id="id43">
+<h5>生命周期<a class="headerlink" href="#id43" title="Permalink to this heading"></a></h5>
+</section>
+<section id="id44">
+<h5>循环依赖<a class="headerlink" href="#id44" title="Permalink to this heading"></a></h5>
+</section>
+</section>
+<section id="aop">
+<h4>AOP<a class="headerlink" href="#aop" title="Permalink to this heading"></a></h4>
+<section id="id45">
+<h5>动态代理<a class="headerlink" href="#id45" title="Permalink to this heading"></a></h5>
+</section>
+<section id="cglib">
+<h5>CGLIB<a class="headerlink" href="#cglib" title="Permalink to this heading"></a></h5>
+</section>
+</section>
+<section id="id46">
+<h4>声明式事务<a class="headerlink" href="#id46" title="Permalink to this heading"></a></h4>
+<section id="id47">
+<h5>隔离级别<a class="headerlink" href="#id47" title="Permalink to this heading"></a></h5>
+</section>
+<section id="id48">
+<h5>传播特性<a class="headerlink" href="#id48" title="Permalink to this heading"></a></h5>
+</section>
+</section>
+</section>
+<section id="spring-mvc">
+<h3>Spring MVC<a class="headerlink" href="#spring-mvc" title="Permalink to this heading"></a></h3>
+<section id="id49">
+<h4>请求参数处理<a class="headerlink" href="#id49" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>&#64;RequestParam</p></li>
+<li><p>&#64;RequestHeader</p></li>
+<li><p>&#64;CookieValue</p></li>
+</ul>
+</section>
+<section id="id50">
+<h4>数据绑定<a class="headerlink" href="#id50" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id51">
+<h4>乱码<a class="headerlink" href="#id51" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id52">
+<h4>请求映射<a class="headerlink" href="#id52" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id53">
+<h4>响应处理<a class="headerlink" href="#id53" title="Permalink to this heading"></a></h4>
+</section>
+<section id="json">
+<h4>JSON处理<a class="headerlink" href="#json" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id54">
+<h4>上传与下载<a class="headerlink" href="#id54" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id55">
+<h4>拦截器<a class="headerlink" href="#id55" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id56">
+<h4>国际化<a class="headerlink" href="#id56" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id57">
+<h4>异常处理<a class="headerlink" href="#id57" title="Permalink to this heading"></a></h4>
+<section id="id58">
+<h5>内置异常处理解析器<a class="headerlink" href="#id58" title="Permalink to this heading"></a></h5>
+</section>
+<section id="id59">
+<h5>统一异常处理<a class="headerlink" href="#id59" title="Permalink to this heading"></a></h5>
+<ul class="simple">
+<li><p>&#64;ControllerAdvice</p></li>
+<li><p>&#64;ExceptionHandler</p></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="mybatis">
+<h3>Mybatis<a class="headerlink" href="#mybatis" title="Permalink to this heading"></a></h3>
+</section>
+<section id="spring-data-jdbc">
+<h3>Spring Data JDBC<a class="headerlink" href="#spring-data-jdbc" title="Permalink to this heading"></a></h3>
+</section>
+<section id="spring-security">
+<h3>Spring Security<a class="headerlink" href="#spring-security" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id60">
+<h3>日志框架<a class="headerlink" href="#id60" title="Permalink to this heading"></a></h3>
+</section>
+<section id="spring-boot">
+<h3>Spring boot<a class="headerlink" href="#spring-boot" title="Permalink to this heading"></a></h3>
+</section>
+<section id="git">
+<h3>git<a class="headerlink" href="#git" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id61">
+<h3>本地缓存框架<a class="headerlink" href="#id61" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id62">
+<h2>分布式中间件<a class="headerlink" href="#id62" title="Permalink to this heading"></a></h2>
+<section id="redis">
+<h3>Redis<a class="headerlink" href="#redis" title="Permalink to this heading"></a></h3>
+<section id="id63">
+<h4>数据类型<a class="headerlink" href="#id63" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id64">
+<h4>持久化<a class="headerlink" href="#id64" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id65">
+<h4>删除策略<a class="headerlink" href="#id65" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id66">
+<h4>淘汰策略<a class="headerlink" href="#id66" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id67">
+<h4>高可用<a class="headerlink" href="#id67" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="rocketmq">
+<h3>RocketMQ<a class="headerlink" href="#rocketmq" title="Permalink to this heading"></a></h3>
+</section>
+<section id="rabbitmq">
+<h3>RabbitMQ<a class="headerlink" href="#rabbitmq" title="Permalink to this heading"></a></h3>
+</section>
+<section id="kafka">
+<h3>Kafka<a class="headerlink" href="#kafka" title="Permalink to this heading"></a></h3>
+</section>
+<section id="elaticsearch">
+<h3>Elaticsearch<a class="headerlink" href="#elaticsearch" title="Permalink to this heading"></a></h3>
+<section id="id68">
+<h4>分词器<a class="headerlink" href="#id68" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id69">
+<h4>关键字搜索<a class="headerlink" href="#id69" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id70">
+<h4>多条件过滤<a class="headerlink" href="#id70" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="docker">
+<h3>Docker<a class="headerlink" href="#docker" title="Permalink to this heading"></a></h3>
+</section>
+<section id="k8s">
+<h3>K8S<a class="headerlink" href="#k8s" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id71">
+<h2>微服务<a class="headerlink" href="#id71" title="Permalink to this heading"></a></h2>
+<section id="springcloud">
+<h3>SpringCloud<a class="headerlink" href="#springcloud" title="Permalink to this heading"></a></h3>
+</section>
+<section id="eureka">
+<h3>Eureka<a class="headerlink" href="#eureka" title="Permalink to this heading"></a></h3>
+</section>
+<section id="nacos">
+<h3>Nacos<a class="headerlink" href="#nacos" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ribbon">
+<h3>Ribbon<a class="headerlink" href="#ribbon" title="Permalink to this heading"></a></h3>
+</section>
+<section id="openfeign">
+<h3>OpenFeign<a class="headerlink" href="#openfeign" title="Permalink to this heading"></a></h3>
+</section>
+<section id="sentinel">
+<h3>Sentinel<a class="headerlink" href="#sentinel" title="Permalink to this heading"></a></h3>
+</section>
+<section id="hystrix">
+<h3>Hystrix<a class="headerlink" href="#hystrix" title="Permalink to this heading"></a></h3>
+</section>
+<section id="seata">
+<h3>Seata<a class="headerlink" href="#seata" title="Permalink to this heading"></a></h3>
+</section>
+<section id="gateway">
+<h3>Gateway<a class="headerlink" href="#gateway" title="Permalink to this heading"></a></h3>
+</section>
+<section id="skywalking">
+<h3>Skywalking<a class="headerlink" href="#skywalking" title="Permalink to this heading"></a></h3>
+</section>
+<section id="loadbalancer">
+<h3>LoadBalancer<a class="headerlink" href="#loadbalancer" title="Permalink to this heading"></a></h3>
+</section>
+<section id="oauth2">
+<h3>OAuth2<a class="headerlink" href="#oauth2" title="Permalink to this heading"></a></h3>
+</section>
+<section id="sleuth">
+<h3>Sleuth<a class="headerlink" href="#sleuth" title="Permalink to this heading"></a></h3>
+</section>
+<section id="pinpoint">
+<h3>Pinpoint<a class="headerlink" href="#pinpoint" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id72">
+<h2>底层原理<a class="headerlink" href="#id72" title="Permalink to this heading"></a></h2>
+<section id="id73">
+<h3>操作系统<a class="headerlink" href="#id73" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id74">
+<h3>计算机网络<a class="headerlink" href="#id74" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id75">
+<h3>IO模型<a class="headerlink" href="#id75" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id76">
+<h3>磁盘存储<a class="headerlink" href="#id76" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id77">
+<h2>框架源码原理<a class="headerlink" href="#id77" title="Permalink to this heading"></a></h2>
+<section id="id78">
+<h3>Spring<a class="headerlink" href="#id78" title="Permalink to this heading"></a></h3>
+<section id="id79">
+<h4>IOC<a class="headerlink" href="#id79" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id80">
+<h4>AOP<a class="headerlink" href="#id80" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id81">
+<h4>事务<a class="headerlink" href="#id81" title="Permalink to this heading"></a></h4>
+</section>
+<section id="mvc">
+<h4>MVC<a class="headerlink" href="#mvc" title="Permalink to this heading"></a></h4>
+</section>
+<section id="security">
+<h4>Security<a class="headerlink" href="#security" title="Permalink to this heading"></a></h4>
+</section>
+<section id="webflux">
+<h4>Webflux<a class="headerlink" href="#webflux" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id82">
+<h3>Mybatis<a class="headerlink" href="#id82" title="Permalink to this heading"></a></h3>
+<section id="id83">
+<h4>源码分析<a class="headerlink" href="#id83" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id84">
+<h4>实现<a class="headerlink" href="#id84" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id85">
+<h3>设计模式<a class="headerlink" href="#id85" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id86">
+<h2>并发编程<a class="headerlink" href="#id86" title="Permalink to this heading"></a></h2>
+<section id="id87">
+<h3>阻塞队列<a class="headerlink" href="#id87" title="Permalink to this heading"></a></h3>
+</section>
+<section id="jmm">
+<h3>JMM<a class="headerlink" href="#jmm" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id88">
+<h3>线程池<a class="headerlink" href="#id88" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id89">
+<h3>并发集合<a class="headerlink" href="#id89" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cas">
+<h3>CAS和原子操作<a class="headerlink" href="#cas" title="Permalink to this heading"></a></h3>
+</section>
+<section id="disruptor">
+<h3>Disruptor<a class="headerlink" href="#disruptor" title="Permalink to this heading"></a></h3>
+</section>
+<section id="juc">
+<h3>JUC<a class="headerlink" href="#juc" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id90">
+<h2>调优<a class="headerlink" href="#id90" title="Permalink to this heading"></a></h2>
+<section id="jvm">
+<h3>JVM<a class="headerlink" href="#jvm" title="Permalink to this heading"></a></h3>
+<section id="id91">
+<h4>类加载机制<a class="headerlink" href="#id91" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id92">
+<h4>内存模型<a class="headerlink" href="#id92" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id93">
+<h4>字节码文件<a class="headerlink" href="#id93" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id94">
+<h4>收集器<a class="headerlink" href="#id94" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id95">
+<h4>调优工具<a class="headerlink" href="#id95" title="Permalink to this heading"></a></h4>
+</section>
+<section id="gc">
+<h4>GC日志<a class="headerlink" href="#gc" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="mysql">
+<h3>Mysql<a class="headerlink" href="#mysql" title="Permalink to this heading"></a></h3>
+<section id="id96">
+<h4>SQL执行原理<a class="headerlink" href="#id96" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id97">
+<h4>索引<a class="headerlink" href="#id97" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id98">
+<h4>执行计划<a class="headerlink" href="#id98" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id99">
+<h4>锁机制与隔离级别<a class="headerlink" href="#id99" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id100">
+<h4>集群架构与分库分表<a class="headerlink" href="#id100" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id101">
+<h3>Tomcat<a class="headerlink" href="#id101" title="Permalink to this heading"></a></h3>
+<section id="id102">
+<h4>线程模型<a class="headerlink" href="#id102" title="Permalink to this heading"></a></h4>
+</section>
+<section id="undertow">
+<h4>undertow<a class="headerlink" href="#undertow" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id103">
+<h3>Nginx<a class="headerlink" href="#id103" title="Permalink to this heading"></a></h3>
+<section id="upstream">
+<h4>upstream<a class="headerlink" href="#upstream" title="Permalink to this heading"></a></h4>
+</section>
+<section id="location">
+<h4>location<a class="headerlink" href="#location" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id104">
+<h4>负载均衡算法<a class="headerlink" href="#id104" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="lvs">
+<h3>LVS<a class="headerlink" href="#lvs" title="Permalink to this heading"></a></h3>
+<section id="keepalived">
+<h4>keepalived<a class="headerlink" href="#keepalived" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+<section id="id105">
+<h2>分布式框架<a class="headerlink" href="#id105" title="Permalink to this heading"></a></h2>
+<section id="id106">
+<h3>消息中间件<a class="headerlink" href="#id106" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id107">
+<h3>存储中间件<a class="headerlink" href="#id107" title="Permalink to this heading"></a></h3>
+<section id="id108">
+<h4>Redis<a class="headerlink" href="#id108" title="Permalink to this heading"></a></h4>
+</section>
+<section id="mongodb">
+<h4>MongoDB<a class="headerlink" href="#mongodb" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id109">
+<h4>Elaticsearch<a class="headerlink" href="#id109" title="Permalink to this heading"></a></h4>
+</section>
+<section id="minio">
+<h4>MinIO<a class="headerlink" href="#minio" title="Permalink to this heading"></a></h4>
+</section>
+<section id="fastdfs">
+<h4>FastDFS<a class="headerlink" href="#fastdfs" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id110">
+<h3>调度中间件<a class="headerlink" href="#id110" title="Permalink to this heading"></a></h3>
+<section id="quartz">
+<h4>Quartz<a class="headerlink" href="#quartz" title="Permalink to this heading"></a></h4>
+</section>
+<section id="elastic-job">
+<h4>Elastic Job<a class="headerlink" href="#elastic-job" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+<section id="id111">
+<h3>其它框架<a class="headerlink" href="#id111" title="Permalink to this heading"></a></h3>
+<section id="zookeeper">
+<h4>Zookeeper<a class="headerlink" href="#zookeeper" title="Permalink to this heading"></a></h4>
+</section>
+<section id="dubbo">
+<h4>Dubbo<a class="headerlink" href="#dubbo" title="Permalink to this heading"></a></h4>
+</section>
+<section id="shardingsphere">
+<h4>ShardingSphere<a class="headerlink" href="#shardingsphere" title="Permalink to this heading"></a></h4>
+</section>
+<section id="netty">
+<h4>Netty<a class="headerlink" href="#netty" title="Permalink to this heading"></a></h4>
+</section>
+<section id="grpc">
+<h4>GRPC<a class="headerlink" href="#grpc" title="Permalink to this heading"></a></h4>
+</section>
+</section>
+</section>
+<section id="id112">
+<h2>大数据<a class="headerlink" href="#id112" title="Permalink to this heading"></a></h2>
+<section id="hadoop">
+<h3>Hadoop<a class="headerlink" href="#hadoop" title="Permalink to this heading"></a></h3>
+</section>
+<section id="hdfs">
+<h3>HDFS<a class="headerlink" href="#hdfs" title="Permalink to this heading"></a></h3>
+</section>
+<section id="hbase">
+<h3>HBase<a class="headerlink" href="#hbase" title="Permalink to this heading"></a></h3>
+</section>
+<section id="tidb">
+<h3>TiDB<a class="headerlink" href="#tidb" title="Permalink to this heading"></a></h3>
+</section>
+<section id="clickhouse">
+<h3>Clickhouse<a class="headerlink" href="#clickhouse" title="Permalink to this heading"></a></h3>
+</section>
+<section id="elk">
+<h3>ELK<a class="headerlink" href="#elk" title="Permalink to this heading"></a></h3>
+</section>
+<section id="efk">
+<h3>EFK<a class="headerlink" href="#efk" title="Permalink to this heading"></a></h3>
+</section>
+<section id="etl">
+<h3>ETL<a class="headerlink" href="#etl" title="Permalink to this heading"></a></h3>
+</section>
+<section id="mapreduce">
+<h3>MapReduce<a class="headerlink" href="#mapreduce" title="Permalink to this heading"></a></h3>
+</section>
+<section id="flink">
+<h3>Flink<a class="headerlink" href="#flink" title="Permalink to this heading"></a></h3>
+</section>
+<section id="kafka-stream">
+<h3>Kafka Stream<a class="headerlink" href="#kafka-stream" title="Permalink to this heading"></a></h3>
+</section>
+<section id="hive">
+<h3>Hive<a class="headerlink" href="#hive" title="Permalink to this heading"></a></h3>
+</section>
+<section id="spark">
+<h3>Spark<a class="headerlink" href="#spark" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id113">
+<h2>架构<a class="headerlink" href="#id113" title="Permalink to this heading"></a></h2>
+<section id="id114">
+<h3>设计原则<a class="headerlink" href="#id114" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id115">
+<h3>架构设计模式<a class="headerlink" href="#id115" title="Permalink to this heading"></a></h3>
+</section>
+<section id="ddd">
+<h3>DDD<a class="headerlink" href="#ddd" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id116">
+<h3>服务化架构治理<a class="headerlink" href="#id116" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id117">
+<h3>架构设计协议<a class="headerlink" href="#id117" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id118">
+<h3>架构方案<a class="headerlink" href="#id118" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id119">
+<h3>核心算法<a class="headerlink" href="#id119" title="Permalink to this heading"></a></h3>
+</section>
+<section id="devops">
+<h3>Devops<a class="headerlink" href="#devops" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id120">
+<h3>测试<a class="headerlink" href="#id120" title="Permalink to this heading"></a></h3>
+<section id="id121">
+<h4>单元测试<a class="headerlink" href="#id121" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id122">
+<h4>冒烟测试<a class="headerlink" href="#id122" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id123">
+<h4>集成测试<a class="headerlink" href="#id123" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id124">
+<h4>全链路测试<a class="headerlink" href="#id124" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id125">
+<h4>性能测试<a class="headerlink" href="#id125" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id126">
+<h4>分布式测试<a class="headerlink" href="#id126" title="Permalink to this heading"></a></h4>
+</section>
+<section id="id127">
+<h4>自动化测试<a class="headerlink" href="#id127" title="Permalink to this heading"></a></h4>
+<section id="selenium">
+<h5>selenium<a class="headerlink" href="#selenium" title="Permalink to this heading"></a></h5>
+</section>
+<section id="webderiver">
+<h5>webderiver<a class="headerlink" href="#webderiver" title="Permalink to this heading"></a></h5>
+</section>
+<section id="xpath">
+<h5>xpath<a class="headerlink" href="#xpath" title="Permalink to this heading"></a></h5>
+</section>
+<section id="cssselector">
+<h5>cssSelector<a class="headerlink" href="#cssselector" title="Permalink to this heading"></a></h5>
+</section>
+</section>
+</section>
+</section>
+<section id="id128">
+<h2>云原生<a class="headerlink" href="#id128" title="Permalink to this heading"></a></h2>
+<section id="id129">
+<h3>容器化<a class="headerlink" href="#id129" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cka">
+<h3>CKA<a class="headerlink" href="#cka" title="Permalink to this heading"></a></h3>
+</section>
+<section id="servicemesh">
+<h3>ServiceMesh<a class="headerlink" href="#servicemesh" title="Permalink to this heading"></a></h3>
+</section>
+<section id="serverless">
+<h3>Serverless<a class="headerlink" href="#serverless" title="Permalink to this heading"></a></h3>
+</section>
+<section id="cncf">
+<h3>CNCF<a class="headerlink" href="#cncf" title="Permalink to this heading"></a></h3>
+</section>
+<section id="id130">
+<h3>云计算平台架构<a class="headerlink" href="#id130" title="Permalink to this heading"></a></h3>
+</section>
+</section>
+<section id="id131">
+<h2>面试<a class="headerlink" href="#id131" title="Permalink to this heading"></a></h2>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to blog’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, yonching.</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用了 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a>开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

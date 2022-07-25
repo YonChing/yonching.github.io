@@ -3,12 +3,6 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-.. automodule:: pymap3d
-  :members:
-
-.. automodule:: pymap3d.vincenty
-  :members:
-
 Welcome to blog's documentation!
 ================================
 
@@ -16,7 +10,7 @@ Welcome to blog's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   Java技术路线
 
 
 Indices and tables
